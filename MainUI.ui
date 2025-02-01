@@ -1,0 +1,1292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainUI</class>
+ <widget class="QWidget" name="MainUI">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1297</width>
+    <height>644</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>基于粒计算的多模态数据多粒度融合仿真系统</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/images/bg01_cs02.png);
+</string>
+  </property>
+  <widget class="QGroupBox" name="bg">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>10</y>
+     <width>1001</width>
+     <height>651</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QFrame" name="frame">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>14</y>
+      <width>981</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;  </string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <widget class="QPushButton" name="resetView_1">
+     <property name="geometry">
+      <rect>
+       <x>850</x>
+       <y>90</y>
+       <width>121</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#resetView_1{
+	background:transparent;
+	color: rgb(0, 0, 0);
+	border-radius:10px
+}
+#resetView_1:hover{
+	icon:url(images/refresh_hover.svg);
+	color: rgb(144, 19, 158);
+	background-color: transparent;
+}
+#resetView_1:pressed{
+	padding-top:5px;
+	padding-left:5px
+}
+</string>
+     </property>
+     <property name="text">
+      <string>重置</string>
+     </property>
+     <property name="icon">
+      <iconset resource="images/image.qrc">
+       <normaloff>:/images/refresh.svg</normaloff>:/images/refresh.svg</iconset>
+     </property>
+    </widget>
+    <widget class="QFrame" name="gridFrame_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>110</y>
+       <width>841</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QPushButton" name="tip5">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;导入的文件必须是.csv格式的文件&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#tip5{
+    background: transparent;  
+    color: white;  
+	text-align: left;
+	color: rgb(0, 0, 0);
+	border-radius:10px
+}
+#tip5:hover{
+	icon:url(:/images/help_hover.svg);
+	color: rgb(144, 19, 158);
+	background-color: transparent;
+}
+#tip5:pressed{
+	padding-top:5px;
+	padding-left:5px
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="images/image.qrc">
+            <normaloff>:/images/help.svg</normaloff>:/images/help.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="font">
+           <font>
+            <family>黑体</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#label_2{
+	border-radius:4px;
+	background-color: transparent;
+	color: rgb(0,0,0);
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string>问题求解层:</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::MarkdownText</enum>
+          </property>
+          <property name="margin">
+           <number>-3</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textView_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="font">
+           <font>
+            <family>黑体</family>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border:2px solid rgb(186,186,186);
+border-radius:10px
+</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QPushButton" name="tip6">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;导入的文件必须是.csv格式的文件&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#tip6{
+    background: transparent;  
+    color: white;  
+	text-align: left;
+	color: rgb(0, 0, 0);
+	border-radius:10px
+}
+#tip6:hover{
+	icon:url(:/images/help_hover.svg);
+	color: rgb(144, 19, 158);
+	background-color: transparent;
+}
+#tip6:pressed{
+	padding-top:5px;
+	padding-left:5px
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="images/image.qrc">
+              <normaloff>:/images/help.svg</normaloff>:/images/help.svg</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="font">
+             <font>
+              <family>黑体</family>
+              <pointsize>16</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#label_2{
+	border-radius:4px;
+	background-color: transparent;
+	color: rgb(0,0,0);
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string>下游任务:</string>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::MarkdownText</enum>
+            </property>
+            <property name="margin">
+             <number>-3</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="textView_4">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="font">
+             <font>
+              <family>黑体</family>
+              <pointsize>16</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:2px solid rgb(186,186,186);
+border-radius:10px
+</string>
+            </property>
+            <property name="html">
+             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'黑体'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QFrame" name="gridFrame_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>30</y>
+       <width>841</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="tip3">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;导入的文件必须是.csv格式的文件&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#tip3{
+    background: transparent;  
+    color: white;  
+	text-align: left;
+	color: rgb(0, 0, 0);
+	border-radius:10px
+}
+#tip3:hover{
+	icon:url(:/images/help_hover.svg);
+	color: rgb(144, 19, 158);
+	background-color: transparent;
+}
+#tip3:pressed{
+	padding-top:5px;
+	padding-left:5px
+}
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="images/image.qrc">
+            <normaloff>:/images/help.svg</normaloff>:/images/help.svg</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <family>黑体</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#label_2{
+	border-radius:4px;
+	background-color: transparent;
+	color: rgb(0,0,0);
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string>数据集名称:</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::MarkdownText</enum>
+          </property>
+          <property name="margin">
+           <number>-3</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textView_1">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="font">
+           <font>
+            <family>黑体</family>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border:2px solid rgb(186,186,186);
+border-radius:10px
+</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'黑体'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="tip4">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;导入的文件必须是.csv格式的文件&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#tip4{
+    background: transparent;  
+    color: white;  
+	text-align: left;
+	color: rgb(0, 0, 0);
+	border-radius:10px
+}
+#tip4:hover{
+	icon:url(:/images/help_hover.svg);
+	color: rgb(144, 19, 158);
+	background-color: transparent;
+}
+#tip4:pressed{
+	padding-top:5px;
+	padding-left:5px
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="images/image.qrc">
+              <normaloff>:/images/help.svg</normaloff>:/images/help.svg</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="font">
+             <font>
+              <family>黑体</family>
+              <pointsize>16</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#label_2{
+	border-radius:4px;
+	background-color: transparent;
+	color: rgb(0,0,0);
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string> 融合算法:</string>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::MarkdownText</enum>
+            </property>
+            <property name="margin">
+             <number>-3</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="textView_2">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="font">
+             <font>
+              <family>黑体</family>
+              <pointsize>16</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:2px solid rgb(186,186,186);
+border-radius:10px
+</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+ margin-bottom: 5px;</string>
+     </property>
+     <property name="text">
+      <string>配置信息</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>240</y>
+      <width>981</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;  </string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>921</width>
+       <height>341</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QTabWidget::tab-bar { 
+	alignment: center; 
+} 
+QTabBar::tab:hover{ 
+	color:  rgb(0, 0, 0);
+	background-color: transparent;
+}
+QTabWidget::pane{ 
+	border:none;
+}
+QTabBar::tab {
+    background-color: transparent; /* 标签页背景颜色 */
+    color: rgb(186, 186, 186); /* 标签页字体颜色 */
+    padding: 10px; /* 内边距 */
+    border: 1px solid rgb(150, 150, 150); /* 边框 */
+    border-top-left-radius: 5px; /* 左上角圆角 */
+    border-top-right-radius: 5px; /* 右上角圆角 */
+}
+QTabBar::tab:selected {
+    background-color: transparent; /* 选中标签页的背景颜色 */
+    color: rgb(0, 0, 0); /* 选中标签页的字体颜色 */
+}
+*{
+	background: transparent;
+}
+
+
+</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="title">
+       <string>粒结构建立</string>
+      </attribute>
+      <widget class="QTextEdit" name="textShow_1">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>901</width>
+         <height>271</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+background: transparent;  
+color: rgb(0, 0, 0);  
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>粒结构优化</string>
+      </attribute>
+      <widget class="QTextEdit" name="textShow_2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>901</width>
+         <height>271</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+background: transparent;  
+color: rgb(0, 0, 0);  
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>求解层选择</string>
+      </attribute>
+      <widget class="QTextEdit" name="textShow_3">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>901</width>
+         <height>271</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+background: transparent;  
+color: rgb(0, 0, 0);  
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_4">
+      <attribute name="title">
+       <string>结果分析</string>
+      </attribute>
+      <widget class="QTextEdit" name="textShow_4">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>901</width>
+         <height>271</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+background: transparent;  
+color: rgb(0, 0, 0);  
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>18</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">margin-bottom: 5px;</string>
+     </property>
+     <property name="text">
+      <string>结果显示</string>
+     </property>
+    </widget>
+    <zorder>label_6</zorder>
+    <zorder>tabWidget</zorder>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>291</width>
+     <height>641</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QFrame" name="gridFrame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>15</y>
+      <width>289</width>
+      <height>617</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="4" column="0">
+      <widget class="QPushButton" name="buildGranular">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#buildGranular{
+text-align: left;
+	
+	background: transparent;
+	color: rgb(0, 0, 0);
+	border-radius:10px
+}
+#buildGranular:hover{
+	icon:url(:/images/newlybuild_hover.svg);
+	color: rgb(144, 19, 158);
+	background-color: transparent;
+}
+#buildGranular:pressed{
+	padding-top:5px;
+	padding-left:5px
+}
+</string>
+       </property>
+       <property name="text">
+        <string>粒结构建立</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images/image.qrc">
+         <normaloff>:/images/newlybuild.svg</normaloff>:/images/newlybuild.svg</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushRh">
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushRh{
+	text-align: left;
+	background: transparent;
+	color: rgb(0, 0, 0);
+	border-radius:10px
+}
+#pushRh:hover{
+icon:url(:/images/newlybuild_hover.svg);
+	color: rgb(144, 19, 158);
+	background-color: transparent;
+}
+#pushRh:pressed{
+	padding-top:5px;
+	padding-left:5px
+}
+</string>
+       </property>
+       <property name="text">
+        <string>融合算法导入</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images/image.qrc">
+         <normaloff>:/images/newlybuild.svg</normaloff>:/images/newlybuild.svg</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QPushButton" name="pushRh_2">
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushRh_2{
+    background: transparent;
+	color: rgb(0, 0, 0);
+	text-align: left;
+	border-radius:10px
+}
+#pushRh_2:hover{
+	icon:url(:/images/newlybuild_hover.svg);
+	color: rgb(144, 19, 158);
+	background-color: transparent;
+}
+#pushRh_2:pressed{
+	padding-top:5px;
+	padding-left:5px
+}
+</string>
+       </property>
+       <property name="text">
+        <string>融合结果分析</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images/image.qrc">
+         <normaloff>:/images/newlybuild.svg</normaloff>:/images/newlybuild.svg</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="btnConfig">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#btnConfig{
+text-align: left;
+	
+	background: transparent;
+	color: rgb(0, 0, 0);
+	border-radius:10px
+}
+#btnConfig:hover{
+	icon:url(:/images/file-settings-one_hover.svg);
+	color: rgb(144, 19, 158);
+	background-color:transparent;
+}
+#btnConfig:pressed{
+	padding-top:5px;
+	padding-left:5px
+}
+</string>
+       </property>
+       <property name="text">
+        <string>数据预处理</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images/image.qrc">
+         <normaloff>:/images/newlybuild.svg</normaloff>:/images/newlybuild.svg</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QPushButton" name="help">
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#help{
+	background: transparent;  
+    color: rgb(0, 0, 0);  
+	text-align: left;
+	border-radius:10px
+}
+#help:hover{
+	icon:url(:/images/help_hover.svg);
+	color: rgb(144, 19, 158);
+	background-color: transparent;
+}
+#help:pressed{
+	padding-top:5px;
+	padding-left:5px
+}
+</string>
+       </property>
+       <property name="text">
+        <string>帮助文档</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images/image.qrc">
+         <normaloff>:/images/help.svg</normaloff>:/images/help.svg</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QPushButton" name="pushProblems">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushProblems{
+    background: transparent;  
+    color: white;  
+	text-align: left;
+	color: rgb(0, 0, 0);
+	border-radius:10px
+}
+#pushProblems:hover{
+	icon:url(:/images/newlybuild_hover.svg);
+	color: rgb(144, 19, 158);
+	background-color: transparent;
+}
+#pushProblems:pressed{
+	padding-top:5px;
+	padding-left:5px
+}
+</string>
+       </property>
+       <property name="text">
+        <string>问题求解层选择</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images/image.qrc">
+         <normaloff>:/images/newlybuild.svg</normaloff>:/images/newlybuild.svg</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushView_1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#pushView_1{
+	text-align: left;
+	background: transparent;
+	color: rgb(0, 0, 0);
+	border-radius:10px
+}
+#pushView_1:hover{
+	icon:url(:/images/newlybuild_hover.svg);
+	color: rgb(144, 19, 158);
+	background-color: transparent;
+}
+#pushView_1:pressed{
+	padding-top:5px;
+	padding-left:5px
+}
+</string>
+       </property>
+       <property name="text">
+        <string>多模态数据导入</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images/image.qrc">
+         <normaloff>:/images/newlybuild.svg</normaloff>:/images/newlybuild.svg</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QPushButton" name="optGranular">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>黑体</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#optGranular{
+text-align: left;
+	
+	background: transparent;  
+    color: rgb(0, 0, 0);  
+	border-radius:10px
+}
+#optGranular:hover{
+	icon:url(:/images/newlybuild_hover.svg);
+	color: rgb(144, 19, 158);
+	background-color: transparent;
+}
+#optGranular:pressed{
+	padding-top:5px;
+	padding-left:5px
+}
+</string>
+       </property>
+       <property name="text">
+        <string>粒结构优化</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images/image.qrc">
+         <normaloff>:/images/newlybuild.svg</normaloff>:/images/newlybuild.svg</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="images/image.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>optGranular</sender>
+   <signal>clicked()</signal>
+   <receiver>MainUI</receiver>
+   <slot>optGranularW()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>128</x>
+     <y>375</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buildGranular</sender>
+   <signal>clicked()</signal>
+   <receiver>MainUI</receiver>
+   <slot>buildGranularW()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>164</x>
+     <y>303</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>206</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushProblems</sender>
+   <signal>clicked()</signal>
+   <receiver>MainUI</receiver>
+   <slot>resolveProblemsW()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>195</x>
+     <y>447</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>346</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnConfig</sender>
+   <signal>clicked()</signal>
+   <receiver>MainUI</receiver>
+   <slot>configGranular()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>60</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>111</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>help</sender>
+   <signal>clicked()</signal>
+   <receiver>MainUI</receiver>
+   <slot>helps()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>106</x>
+     <y>590</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>407</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushView_1</sender>
+   <signal>clicked()</signal>
+   <receiver>MainUI</receiver>
+   <slot>importView()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>112</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>108</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetView_1</sender>
+   <signal>clicked()</signal>
+   <receiver>MainUI</receiver>
+   <slot>resetInfo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1230</x>
+     <y>141</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1174</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushRh</sender>
+   <signal>clicked()</signal>
+   <receiver>MainUI</receiver>
+   <slot>rhSelect()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>254</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>502</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushRh_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainUI</receiver>
+   <slot>rhResult()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>204</x>
+     <y>506</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>247</x>
+     <y>643</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushRh_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainUI</receiver>
+   <slot>rhResult()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>130</x>
+     <y>497</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>550</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>importView()</slot>
+  <slot>reSetView()</slot>
+  <slot>buildGranularW()</slot>
+  <slot>optGranularW()</slot>
+  <slot>resolveProblemsW()</slot>
+  <slot>configGranular()</slot>
+  <slot>helps()</slot>
+  <slot>selectRadio()</slot>
+  <slot>resetInfo()</slot>
+  <slot>rhSelect()</slot>
+  <slot>rhResult()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1326</width>
+    <height>718</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>1311</width>
+     <height>701</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#frame{
+  background-image: url(:/images/bg3.jpeg);
+  background-position: center;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QTextBrowser" name="helpss">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1321</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#helpss{
+	border-radius:4px;
+	background-color: transparent;
+}
+</string>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:15.96pt; font-weight:600; color:#000000;&quot;&gt;多模态数据多粒度融合仿真系统说明文档&lt;/span&gt;&lt;span style=&quot; font-family:'TimesNewRomanPS-BoldMT'; font-size:15.96pt; color:#000000;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'TimesNewRomanPS-BoldMT'; font-size:15.96pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#000000;&quot;&gt;  基于提出的多模态数据粒结构的建立方法、多模态数据粒结构的优化方法 和最优粒度层和满意粒度层的选择方法，设计并实现了多模态数据多粒度融合 仿真系统，为多模态数据多粒度融合模型的验证提供了实验环境。系统的主界 面如图 &lt;/span&gt;&lt;span style=&quot; font-family:'TimesNewRomanPSMT'; font-size:12pt; color:#000000;&quot;&gt;1 &lt;/span&gt;&lt;span style=&quot; font-size:12pt; color:#000000;&quot;&gt;所示。该仿真系统主要包括三大功能模块，分别是输入模块，处理模 块和分析模块，下面对每个功能模块进行介绍。&lt;/span&gt;&lt;span style=&quot; font-family:'TimesNewRomanPSMT'; font-size:12pt; color:#000000;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/images/cs001.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#000000;&quot;&gt;图 &lt;/span&gt;&lt;span style=&quot; font-family:'TimesNewRomanPSMT'; font-size:12pt; color:#000000;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-size:12pt; color:#000000;&quot;&gt;：多模态数据多粒度融合仿真系统主界面&lt;/span&gt;&lt;span style=&quot; font-family:'TimesNewRomanPSMT'; font-size:12pt; color:#000000;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'TimesNewRomanPSMT'; font-size:12pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#000000;&quot;&gt;  输入模块主要包括三个功能，分别是多模态数据导入、多模态数据融合算 法导入和数据预处理。多模态数据导入将待处理的数据集进行导入，目前支 持&lt;/span&gt;&lt;span style=&quot; font-family:'TimesNewRomanPSMT'; font-size:12pt; color:#000000;&quot;&gt;.csv &lt;/span&gt;&lt;span style=&quot; font-size:12pt; color:#000000;&quot;&gt;格式的数据，在配置信息的数据集名称中会显示导入的数据集。融合算 法导入将多模态数据融合算法进行导入，目前支持数据融合、特征融合和结果 融合三种融合算法，在配置信息的融合算法中会显示导入的融合算法。数据预 处理对导入的多模态数据进行处理生成标准化格式的数据。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#000000;&quot;&gt;  处理模块主要包括三个功能，分别是多模态数据粒结构的建立、多模态数 据粒结构的优化和基于粒结构的问题求解层选择。粒结构建立实现多模态数据 多视角多层次粒结构的构造，结果通过右侧结果显示中粒结构建立进行输出。 粒结构优化对多模态数据多视角多层次粒结构的视角、层次和属性进行约简， 优化后的粒结构通过右侧结果显示中粒结构优化进行输出。问题求解层选择在优化后的粒结构中选择问题求解层，目前支持最优粒度层和满意粒度层的选 择，在配置信息的问题求解层中会显示选择的问题求解层，选择的结果通过右 侧结果显示中求解层选择进行输出。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#000000;&quot;&gt;  分析模块主要是针对具体的下游任务，根据选择出的问题求解层和相应的 融合算法，通过下游任务的执行效果验证多模态数据粒结构的建立、多模态数 据粒结构的优化和基于粒结构的问题求解层选择的有效性。目前下游任务主要 支持决策树、&lt;/span&gt;&lt;span style=&quot; font-family:'TimesNewRomanPSMT'; font-size:12pt; color:#000000;&quot;&gt;K &lt;/span&gt;&lt;span style=&quot; font-size:12pt; color:#000000;&quot;&gt;近邻、支持向量机等分类算法，在配置信息的下游任务中会显 示相应的分类器。性能评价指标主要是分类精度。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../granular/MultiModel/images/image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
